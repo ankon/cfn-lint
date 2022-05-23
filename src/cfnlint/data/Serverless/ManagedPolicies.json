@@ -552,6 +552,7 @@
   "AmazonEMRContainersServiceRolePolicy": "arn:aws:iam::aws:policy/aws-service-role/AmazonEMRContainersServiceRolePolicy",
   "AmazonEMRFullAccessPolicy_v2": "arn:aws:iam::aws:policy/AmazonEMRFullAccessPolicy_v2",
   "AmazonEMRReadOnlyAccessPolicy_v2": "arn:aws:iam::aws:policy/AmazonEMRReadOnlyAccessPolicy_v2",
+  "AmazonEMRServerlessServiceRolePolicy": "arn:aws:iam::aws:policy/aws-service-role/AmazonEMRServerlessServiceRolePolicy",
   "AmazonEMRServicePolicy_v2": "arn:aws:iam::aws:policy/service-role/AmazonEMRServicePolicy_v2",
   "AmazonESCognitoAccess": "arn:aws:iam::aws:policy/AmazonESCognitoAccess",
   "AmazonESFullAccess": "arn:aws:iam::aws:policy/AmazonESFullAccess",

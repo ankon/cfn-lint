@@ -10315,7 +10315,7 @@
         "CaseSensitive": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-usernameconfiguration.html#cfn-cognito-userpool-usernameconfiguration-casesensitive",
           "PrimitiveType": "Boolean",
-          "Required": false,
+          "Required": true,
           "UpdateType": "Mutable"
         }
       }
@@ -44880,7 +44880,7 @@
       }
     }
   },
-  "ResourceSpecificationVersion": "72.0.0",
+  "ResourceSpecificationVersion": "72.1.0",
   "ResourceTypes": {
     "AWS::AccessAnalyzer::Analyzer": {
       "Attributes": {
@@ -51224,6 +51224,12 @@
           "Required": false,
           "UpdateType": "Mutable"
         },
+        "EnablePropagateAdditionalUserContextData": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-enablepropagateadditionalusercontextdata",
+          "PrimitiveType": "Boolean",
+          "Required": false,
+          "UpdateType": "Mutable"
+        },
         "EnableTokenRevocation": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-enabletokenrevocation",
           "PrimitiveType": "Boolean",
@@ -54608,6 +54614,11 @@
       }
     },
     "AWS::EC2::PlacementGroup": {
+      "Attributes": {
+        "GroupName": {
+          "PrimitiveType": "String"
+        }
+      },
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-placementgroup.html",
       "Properties": {
         "Strategy": {

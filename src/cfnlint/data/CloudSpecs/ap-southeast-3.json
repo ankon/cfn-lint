@@ -7983,6 +7983,15 @@
             "ValueType": "AWS::DataSync::Task.Options.Mtime"
           }
         },
+        "ObjectTags": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-options.html#cfn-datasync-task-options-objecttags",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Mutable",
+          "Value": {
+            "ValueType": "AWS::DataSync::Task.Options.ObjectTags"
+          }
+        },
         "OverwriteMode": {
           "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-options.html#cfn-datasync-task-options-overwritemode",
           "PrimitiveType": "String",
@@ -23824,7 +23833,7 @@
       }
     }
   },
-  "ResourceSpecificationVersion": "72.0.0",
+  "ResourceSpecificationVersion": "72.1.0",
   "ResourceTypes": {
     "AWS::ACMPCA::Certificate": {
       "Attributes": {
@@ -33986,6 +33995,53 @@
         }
       }
     },
+    "AWS::IAM::OIDCProvider": {
+      "Attributes": {
+        "Arn": {
+          "PrimitiveType": "String"
+        }
+      },
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-oidcprovider.html",
+      "Properties": {
+        "ClientIdList": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-oidcprovider.html#cfn-iam-oidcprovider-clientidlist",
+          "PrimitiveItemType": "String",
+          "Required": false,
+          "Type": "List",
+          "UpdateType": "Mutable",
+          "Value": {
+            "ValueType": "AWS::IAM::OIDCProvider.ClientIdList"
+          }
+        },
+        "Tags": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-oidcprovider.html#cfn-iam-oidcprovider-tags",
+          "DuplicatesAllowed": true,
+          "ItemType": "Tag",
+          "Required": false,
+          "Type": "List",
+          "UpdateType": "Mutable"
+        },
+        "ThumbprintList": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-oidcprovider.html#cfn-iam-oidcprovider-thumbprintlist",
+          "PrimitiveItemType": "String",
+          "Required": true,
+          "Type": "List",
+          "UpdateType": "Mutable",
+          "Value": {
+            "ValueType": "AWS::IAM::OIDCProvider.ThumbprintList"
+          }
+        },
+        "Url": {
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-oidcprovider.html#cfn-iam-oidcprovider-url",
+          "PrimitiveType": "String",
+          "Required": false,
+          "UpdateType": "Immutable",
+          "Value": {
+            "ValueType": "AWS::IAM::OIDCProvider.Url"
+          }
+        }
+      }
+    },
     "AWS::IAM::Policy": {
       "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html",
       "Properties": {
@@ -41216,6 +41272,12 @@
         "PRESERVE"
       ]
     },
+    "AWS::DataSync::Task.Options.ObjectTags": {
+      "AllowedValues": [
+        "PRESERVE",
+        "NONE"
+      ]
+    },
     "AWS::DataSync::Task.Options.OverwriteMode": {
       "AllowedValues": [
         "ALWAYS",
@@ -42242,6 +42304,19 @@
           "String"
         ]
       }
+    },
+    "AWS::IAM::OIDCProvider.ClientIdList": {
+      "StringMax": 255,
+      "StringMin": 1
+    },
+    "AWS::IAM::OIDCProvider.ThumbprintList": {
+      "AllowedPatternRegex": "[0-9A-Fa-f]{40}",
+      "StringMax": 40,
+      "StringMin": 40
+    },
+    "AWS::IAM::OIDCProvider.Url": {
+      "StringMax": 255,
+      "StringMin": 1
     },
     "AWS::IAM::Path.Path": {
       "AllowedPatternRegex": "^/(.+/)*$",
